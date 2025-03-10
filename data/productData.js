@@ -1,3 +1,4 @@
+//database layer handle all the database connections
 const pool = require('../database.js');
 
 //when we store data as decimal in mysql, it is stored as string
@@ -8,7 +9,12 @@ async function getAllProducts() {
     return rows;
 }
 
-async function getProductById (params) {
+async function getProductById (id) {
     const [rows] = await pool.query('SELECT * FROM products WHERE id = ?', [id]);
     return rows[0];
+}
+
+module.exports = {
+    getAllProducts,
+    getProductById
 }
