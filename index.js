@@ -2,6 +2,8 @@ const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
 
+const productsRouter = require('./routes/products');
+
 const app = express();
 
 //Middleware
@@ -12,6 +14,9 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+
+//routes
+app.use('/api/products', productsRouter);
 
 app.get('/', (req, res) => { 
     res.json({
