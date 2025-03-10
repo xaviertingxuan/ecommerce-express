@@ -6,6 +6,25 @@
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
     "mysql2": "^3.13.0",
+    "nodemon": "^3.1.9",
     "stripe": "^17.7.0"
-  }
+  },"scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "name": "ecommerce-express",
+  "version": "1.0.0",
+  "description": "To start mysql, in the terminal, type in `mysql -u root`",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xaviertingxuan/ecommerce-express.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xaviertingxuan/ecommerce-express/issues"
+  },
+  "homepage": "https://github.com/xaviertingxuan/ecommerce-express#readme"
 }
