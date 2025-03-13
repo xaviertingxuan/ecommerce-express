@@ -33,5 +33,5 @@ const PORT = process.env.PORT || 3000;
 //so that we can use the port that is assigned by the hosting service
 
 app.listen(PORT, () => {
-    console.log('Server is running on port' + PORT);
+    console.log('Server is running on port ' + PORT);
 });
