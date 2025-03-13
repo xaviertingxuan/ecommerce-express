@@ -1,6 +1,8 @@
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
+const userRoutes = require('./routes/users');
+
 
 const productsRouter = require('./routes/products');
 
@@ -23,6 +25,8 @@ app.get('/', (req, res) => {
         message: 'Welcome to my World'
     });
 } )
+
+app.use('/api/users', userRoutes);
 
  //start server
 const PORT = process.env.PORT || 3000;
