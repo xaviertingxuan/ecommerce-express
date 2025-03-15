@@ -20,14 +20,16 @@ async function registerUser({ name, email, password, salutation, country, market
         country
     });
 }
-
+//tracking and analyatic of user should be in service layer
 async function loginUser (email, password){
     const user = await userData.getUserByEmail(email);
     if(!user){
         throw new Error ('invalid email or password')
     }
+    console.log(email, password)
+    console.log (user)
 
-    const isPasswordValid = await bcrypt.compare(password, user.paswword);
+    const isPasswordValid = await bcrypt.compare(password, user.password);
     if(!isPasswordValid){
         throw new Error ('invalid email or password')
     }
