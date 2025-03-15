@@ -34,8 +34,23 @@ async function loginUser (email, password){
     return user;
 }
 
+async function updateUserDetails (id, userData) {
+    return await userData.updateUser (id, userData);
+}
+
+async function deleteUserAccount (id) {
+    return await userData.deleteUser(id);
+}
+
+async function getUserDetailsById(id){
+    return await userData.getUserById(id)
+}
+
 module.exports = {
     registerUser,
     loginUser,
+    updateUserDetails,
+    deleteUserAccount,
+    getUserDetailsById,
   };
   
