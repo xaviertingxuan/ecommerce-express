@@ -38,6 +38,7 @@ router.post('/login', async (req, res) => {
     const { email, password } = req.body;
 
     const user = await userService.loginUser(email, password);
+    // payload
     const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET, { expiresIn: '1h' });
     
     res.json({ message: "Login successful"}, token, { user_id: user.id });
